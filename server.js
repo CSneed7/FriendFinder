@@ -8,9 +8,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 
-require(path.join(__dirname, './friend-finder/routing/apiroutes'))(app);
-require(path.join(__dirname, './friend-finder/routing/htmlroutes'))(app);
+require(path.join(__dirname, './friend-finder/routing/apiroutes.js'))(app);
+require(path.join(__dirname, './friend-finder/routing/htmlroutes.js'))(app);
 
 app.listen(PORT, function() {
-  console.log('Pokemon Pal app is listening on PORT: https://localhost:' + PORT);
+  console.log('Pokemon Pal app is listening on PORT: localhost:' + PORT);
 });
